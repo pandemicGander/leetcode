@@ -26,6 +26,9 @@ class ListNode {
     }
 
     public static ListNode createListNodes(int[] nodes){
+        if (nodes.length == 0){
+            return new ListNode();
+        }
         ListNode currentNode = new ListNode(nodes[0]);
         for (int i = 1; i < nodes.length; i++) {
             currentNode = new ListNode(nodes[i], currentNode);
