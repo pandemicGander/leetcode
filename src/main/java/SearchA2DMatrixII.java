@@ -42,14 +42,12 @@ public class SearchA2DMatrixII {
     }
 
     private boolean checkSingleRow(Function<Matrix, Matrix> moveFunction, int[][] matrixInput, int target, Matrix matrix) {
-        matrix.resetFailedMove();
         while (!matrix.isFailedMove()) {
             if (target == moveFunction.apply(matrix).getCurrentValue(matrixInput)) {
                 return true;
             }
         }
         return false;
-
     }
 
 
